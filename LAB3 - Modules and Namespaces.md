@@ -104,3 +104,51 @@
 
 5. Run `tsc` and check for errors.
 		
+
+## Use NPM dependencies
+
+1. Run the following command to initialize the project
+
+		npm init
+
+	> After running this command, a new file `package.json` should be created, containing the project description and list of NPM dependencies
+
+
+2.  To install a NPM dependency, use the following command
+	
+		npm install --save <name-of-dependency>
+	or
+			
+		yarn add <name-of-dependency>
+	
+ - Run the following command to install **[Moment.js](https://momentjs.com/)** for date formatting
+	
+		npm install --save moment
+	
+	> After running the previous command, a new folder `node_modules` is created, which contains the dependencies bundles, and a new line in the `dependencies` section  in `package.json` file
+	
+		"dependencies": {
+			"moment": "^2.29.4"
+		}
+
+4. Run the following command to install a dev dependency
+	
+		npm install --save-dev tsc-alias
+
+	> A dev-depdendency is a dependency which is used only at design (devlopment) time and is not included in the runtime.
+
+
+2. Add a command shortcut in `scripts` section in `package.json` file
+	
+		"scripts": {
+			"start": "tsc && tsc-alias && node dist/main.js",
+			"test": "echo \"Error: no test specified\" && exit 1"
+		}
+	
+	> The `start` command shortcut, runs `tsc` to type check then invoke `tsc-alias` to replace path aliases by the real realtive paths and finaly run the output file `main.js`
+
+6. To run commands that are specified in `scripts`,  use `npm <name>` for example:
+		
+		npm start 
+		// or yarn start
+
