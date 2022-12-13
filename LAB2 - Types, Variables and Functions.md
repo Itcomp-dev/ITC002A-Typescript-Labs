@@ -23,7 +23,7 @@
 
 5. Add another  property `assignedTo`  of type `Person` to the `Task` interface
 		
-		assignedTo?: Person;
+		assignedTo: Person;
 6. Declare a new interface `Person` having the properties: `id`, `firstName` and `lastName`
 	 
 		 interface Person {
