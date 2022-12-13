@@ -1,8 +1,10 @@
 # Lab 2: Types, Variables and Functions
 
+In this lab, you'll be creating a simple task manager. you'll learn how to declare types, use type annotations with variables and functions.
 
 
 ## Working with types
+In the first section, we'll create new types using interfaces, add and manipulate properties.
 
 1. Open the starter project with VSCode
 2. Transform the JS File `main.js` file in the src folder into a TS file by changing the extension (`main.ts`)
@@ -49,6 +51,8 @@
 
 ## Duck-typing (Structural typing)
 
+Next, let's see how we can take advantage of the duck-typing when creating objects:
+
 1. Create a new variable `me`  (use `let`, `var` or `const` keyword)
 2. The variable `me` should contain the two properties: `id`,  `firstName` and `lastName`
 
@@ -72,7 +76,9 @@
 
 ## Functions
 
-1. In the same file, create a function `addTask` that should takes all the properties of the type `Task` and add type annotations for the parameters and return type (it should return a `Task` object)
+Typescript supports type annotations for function's parameters types and return type:
+
+1. In the same file (`data.ts`), create a function `addTask` that should takes all the properties of the type `Task` and add type annotations for the parameters and return type (it should return a `Task` object)
 
 		function addTask(id: number, title: string, description: string, date: Date, 
 											assignedTo: Person, data?: any): Task {
