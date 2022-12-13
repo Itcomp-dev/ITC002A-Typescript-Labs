@@ -11,7 +11,7 @@ In this first lab, you will setup the development environment, install Typecript
 
 		npm install -g typescript
 		
-	> Some version of windows, running scripts is disabled, to enable them run **Powershell as Administrator** and exceute the following command:
+	> In some Windows editions, running scripts is disabled, to enable them run **Powershell as Administrator** and exceute the following command:
 		`Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
 	
 4. Run the following command to check of the TS compiler `tsc`  is correctly installed
