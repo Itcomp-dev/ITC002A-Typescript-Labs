@@ -1,8 +1,14 @@
 # Lab 4: Classes, Interfaces and Enums
 
+Object Oriented programming (OOP) is a programming paradigm that relies on the concept of classes and objects. Typecript developers can build their applications using this object-oriented class-based approach.
+
+In this lab, we'll learn how to use OOP concepts within a Typesript project.
+
 
 ## Working with Classes
 
+First, we'll create a class and define its fields and methods:
+ 
 1. Open the starter project with VSCode
 2. Go to `src/models.ts` and transform the `Task` interface into a class 
 
@@ -56,6 +62,8 @@
 
 ## Implementing Interfaces
 
+Another core concept of OOP, is interfaces which are a powerful way of defining contracts within your code as well as contracts with code outside of your project:
+
 1. Open `models.ts` file and delete the `Tasks` type,  `addTask`, `updateTask` and `deleteTask` functions and the `tasks` variable
 2. Open `data.ts`  file and create a new interface called `Crud` 
 3. Add three method signatures : `add`, `update` and `delete`
@@ -108,6 +116,8 @@
 
 ## Declaring an enum
 
+In this section, we'll group a set of values into an eumeration and use it as a type:
+
 1. Go to `models.ts` and create a en enum `Priority` 
 
 		export  enum Priority {
@@ -127,6 +137,8 @@
 
 ## Class inheritance
 
+One of the most fundamental patterns in class-based programming is being able to extend existing classes to create new ones using inheritance:
+
 1. In the same file create a classe `ImportantTask` which **extends** the Task class
 
 		export  class ImportantTask extends Task {
@@ -143,6 +155,8 @@
 
 
 ## Generics
+One of the main tools for creating reusable components is generics, that is, being able to create a component that can work over a variety of types rather than a single one. 
+
  `TaskManager` class now show manage both classes `Task` and `ImportantTask` , to do so we can use generics.
 1. Go to `data.ts` file and add a type argument for the `Crud` interface
 	
