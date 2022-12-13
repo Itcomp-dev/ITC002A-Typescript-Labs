@@ -118,6 +118,7 @@ Namespaces are a TypeScript-specific way to organize code. Namespaces are simply
 
 ## Use NPM dependencies
 Any JS or TS project (Web, Mobile or Backend) needs to use external dependencies, for JS/TS external dependencies are manager by the NPM registry (Node Package Manager). Open source developers and developers at companies use the npm registry to contribute packages to the entire community.
+
 In this section, you'll learn how to setup your project to use npm in order to install dependencies and use them:
 
 1. Run the following command to initialize the project
