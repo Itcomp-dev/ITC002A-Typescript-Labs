@@ -1,9 +1,13 @@
 # Lab 3: Modules and Namespaces
 
+This lab outlines the various ways to organize your code using modules and namespaces in TypeScript. 
+
 
 ## Modules
+Modules are executed within their own scope, not in the global scope; this means that variables, functions, classes, etc. declared in a module are not visible outside the module. Modules are declarative; the relationships between modules are specified in terms of imports and exports at the file level.
 
 ### Global scope
+First, we'll separate our code into multiple files but still execute it in the global scope: 
 1. Open the starter project with VSCode
 2. Create a new file `models.ts` in the `src`  folder
 3. Move all the types (interface or type) into `models.ts`
@@ -15,6 +19,7 @@
 	> Altough we sperated our elements (types, variables and functions) into separate files, the TS show no error and that's because no file have an import statement and as result everything is considered in the **global scope**.
 
 ### Exporting
+Once we use an export , we define our module that is scoped to the file: 
 
 1. Open  `models.ts`  file  and add an export eyword for every type declaration, example:
 
@@ -35,6 +40,8 @@
 	> After adding `export` keyword , each file is considered as a module and have it's own local scope, therefore we'll need to add `import` statements to use the exports.
 
 ### Importing
+To use exports, we must reference them using imports statements :
+
 1. In the data file (`data.ts`), fix the errors by adding the missing import statements like the following
 				
 		import { Person, Task, Tasks } from  "./models"
@@ -48,6 +55,8 @@
 3. Compile using `tsc` 
 
 ### Path mapping
+Typescript support path mapping which gives a path (folder or file) an alias that can be used within the imports statements:
+
 1. Open TS configuration file : `tsconfig.json`
 2. Search for the property `baseUrl`, uncomment it and set it to the root project directory (`./`)
 
@@ -74,6 +83,8 @@
 
 
 ## Namespaces
+Namespaces are a TypeScript-specific way to organize code. Namespaces are simply named JavaScript objects in the global namespace. This makes namespaces a very simple construct to use to  keep track of our types and not worry about name collisions with other objects.
+
 1. Head over `models.ts` file and create a namespace `Models`
 
 		namespace Models {
@@ -106,6 +117,8 @@
 		
 
 ## Use NPM dependencies
+Any JS or TS project (Web, Mobile or Backend) needs to use external dependencies, for JS/TS external dependencies are manager by the NPM registry (Node Package Manager). Open source developers and developers at companies use the npm registry to contribute packages to the entire community.
+In this section, you'll learn how to setup your project to use npm in order to install dependencies and use them:
 
 1. Run the following command to initialize the project
 
