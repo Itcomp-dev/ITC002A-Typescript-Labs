@@ -57,7 +57,8 @@ Open `data.ts` file and update the return type of `addTask` and `updateTask`  so
 1. Open `models.ts`  and remove the  `assignedTo` property of the `Task` low priority tasks, i.e. for the types `UnimportantTask`
 Use the utility type `Omit<T, Keys>` to remove specific `Keys`  from `T` type:
 
-	export  type UnimportantTask = Omit<Task, "assignedTo"> & {priority: Priority.Low}
+	
+		export  type UnimportantTask = Omit<Task, "assignedTo"> & {priority: Priority.Low}
 
 2. Create  a variable `notImportant` of type `UnimportantTask` and assign an object instance to check for type errors.
 
