@@ -49,14 +49,14 @@
 We can customize and change the behavior of the Typescript compiler by changing the options in the `tsconfig.json` or provinding options for the `tsc` command.
 
 
-1. By default,  tsc command compies every file found in the root directry (at the tsconfig level), to specify the root folder within your source files, we can change the value `rootDir` in t`sconfig.json`, for example:
+1. By default, `tsc` command compiles every file found in the root directry (at the tsconfig level), to specify the root folder within your source files, we can change the value `rootDir` in `tsconfig.json`, for example:
 
 
-		"rootDir": "./dist",
+		"rootDir": "./src",
 
 	> By providing this option, this tells the compiler what TS files to include in the compilation
 
-2. By default the output folder of the compilation is the project root directory itself, we can change it by setting the value `outDir` in t`sconfig.json`, for example:
+2. By default the output folder of the compilation is the project root directory itself, we can change it by setting the value `outDir` in `tsconfig.json`, for example:
 	
 		"outDir": "./dist",
 
