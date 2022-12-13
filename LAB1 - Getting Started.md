@@ -1,6 +1,6 @@
 # LAB 1: Getting started with Typescript
 
-
+In this first lab, you will setup the development environment, install Typecript and compile your first Typescript file.
 
 
 ## Install requirements
